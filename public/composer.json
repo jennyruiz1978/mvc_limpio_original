@@ -1,0 +1,14 @@
+{
+    "name": "usuario/public",
+    "require": {
+        "twbs/bootstrap": "^4.5",
+        "fortawesome/font-awesome": "^5.13",
+        "components/jquery": "^3.5"
+    },
+    "authors": [
+        {
+            "name": "Pedro Silva",
+            "email": "pedro.silva@dataleanmakers.es"
+        }
+    ]
+}
