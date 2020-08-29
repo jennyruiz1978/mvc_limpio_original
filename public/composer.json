@@ -3,7 +3,8 @@
     "require": {
         "twbs/bootstrap": "^4.5",
         "fortawesome/font-awesome": "^5.13",
-        "components/jquery": "^3.5"
+        "components/jquery": "^3.5",
+        "spipu/html2pdf": "^5.2"
     },
     "authors": [
         {

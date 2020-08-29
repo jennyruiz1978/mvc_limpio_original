@@ -8,6 +8,6 @@ define('DB_NOMBRE','admin_informa');
 // Ruta de la aplicacion
 define('RUTA_APP', dirname(dirname(__FILE__)));
 
-define('RUTA_URL','http://localhost/cardador_crm');
+define('RUTA_URL','http://localhost/mvc_limpio_original');
 // NOMBRE DEL SITIO
-define('NOMBRE_SITIO', 'CRM CARDADOR');
+define('NOMBRE_SITIO', 'MVC ORIGINAL');

@@ -111,7 +111,7 @@
 
 
                 <form class="form-signin" action="<?php echo RUTA_URL ?>/Login/acceder" method="POST" autocomplete="off">
-                    <h1 class='text-center'>CARDADOR</h1>
+                    <h1 class='text-center'>MVC ORIGINAL</h1>
                     <h6 class="text-center">Ingresa tus datos</h6>
                     <br>
                     <label for="inputEmail" class="sr-only">Email</label>
