@@ -17,5 +17,17 @@ class generarPdf {
         $html2pdf->writeHTML($html);
         $html2pdf->output('ejemplo.pdf');
     }
+    public static function documentoPDFDesdevariable($orientacion,$formato,$idioma,$unicode,
+            $codificacion,$margenes, $pdfa, $variable, $salida) {
+
+        ob_start();
+        $variable;
+
+        $html = ob_get_clean();
+        $html2pdf = new Html2Pdf($orientacion,$formato,$idioma,$unicode,$codificacion,$margenes,$pdfa);
+        $html2pdf->writeHTML($html);
+        $html2pdf->output($salida);
+    }
+
 
 }
