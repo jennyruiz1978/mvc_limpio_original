@@ -49,5 +49,15 @@
             return $upload;
         }
 
-          
+        public static function downloadFile($filename,$directorio)
+        {                
+            $file = DOCUMENTOS_PRIVADOS.$directorio."/".$filename;
+            $mime = mime_content_type($file);
+            header('Content-disposition: attachment; filename='.str_replace(" ",'_',$filename));
+            header('Content-type: '.$mime);
+            readfile($file);
+            
+        }    
+
+        
     }
