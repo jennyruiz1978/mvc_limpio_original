@@ -21,7 +21,7 @@
 <!-- Load d3.js and c3.js -->
 <script src="<?php echo RUTA_URL ?>/public/node_modules/d3/dist/d3.js" charset="utf-8"></script>
 <script src="<?php echo RUTA_URL ?>/public/node_modules/c3/c3.js"></script>
-
+<script type="text/javascript" src="<?php echo RUTA_URL ?>/public/js/vistaInicio.js"></script>
 
 
 
