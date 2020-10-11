@@ -62,14 +62,11 @@ class Presupuesto extends Controlador
         //$this->iniciar();
         
         //consulto el fichero en la BD
+        $directorio = 'presupuesto';
         $row = $this->ModelPresupuesto->verificarFichero($idDoc);
         if ($row) {
             $filename = $row->nombre;
-            $file = DOCUMENTOS_PRIVADOS."presupuesto/".$filename;
-            $mime = mime_content_type($file);
-            header('Content-disposition: attachment; filename='.str_replace(" ",'_',$filename));
-            header('Content-type: '.$mime);
-            readfile($file);
+            UpDownLoadFichero::downloadFile($filename,$directorio);
         }else{
             echo"FICHERO NO ENCONTRADO";
         }
