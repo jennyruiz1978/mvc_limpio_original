@@ -123,9 +123,9 @@ class Factura extends Controlador
         $nombreFichero = $_FILES['plantillaFacturas']['name'];
         $nombreFinal = $ultimoDoc."_".$nombreFichero;
         $nombreTmp = $_FILES['plantillaFacturas']['tmp_name'];
-        $descripcion = $_POST['descripcionFichero'];
-        $idPresupuesto = $_POST['idPresupuesto']; //identifica a qué presupuesto pertenece el fichero
-        $tipo = $_FILES['plantillaFacturas']['type'];
+        //$descripcion = $_POST['descripcionFichero'];
+        //$idPresupuesto = $_POST['idPresupuesto']; //identifica a qué presupuesto pertenece el fichero
+        //$tipo = $_FILES['plantillaFacturas']['type'];
         $datos = [];
         $datos['controlador'] = 'Presupuesto';
         
@@ -133,7 +133,7 @@ class Factura extends Controlador
         $upload = UpDownLoadFichero::uploadFile($subDirectorio,$nombreFinal,$nombreTmp);
         if ($upload) {
             //si ha subido, que lo lea e importe los datos a la BD
-            $importados = $this->obtenerDatosFicheroExcel($nombreFinal);
+            $importados = $this->obtenerDatosFicheroExcel($nombreFinal,$subDirectorio);
             if ($importados) {
                 $retorno = true;
                 redireccionar('/Factura');
@@ -149,23 +149,19 @@ class Factura extends Controlador
     
     }
 
-    public function obtenerDatosFicheroExcel($name) {        
+    public function obtenerDatosFicheroExcel($name,$dir) {        
         
-        $rutaArchivo = DOCUMENTOS_PRIVADOS."facturas/".$name;
-       
+        $rutaArchivo = DOCUMENTOS_PRIVADOS.$dir."/".$name;       
         $documento = IOFactory::load($rutaArchivo);
-
         $sheet = $documento->getSheet(0);
-
-        $numeroFacturas = 0;        
-        
-        $arr_data_facturas=[];
+        $numeroRegistros = 0;        
+        $arr_data_registros = [];
 
         // 2 es la fila donde empiezan los datos en el fichero excel
+       
         foreach ($sheet->getRowIterator(2) as $row) {
-            //a partir de aquí utiliza la librería directamente pero no es esa la idea, 
-            //voy a modificarlo para que sea dinámico y
-            //sirva para cualquier fichero excel que se importe
+            //a partir de aquí utiliza la librería directamente            
+            
             $numfactura = trim($sheet->getCellByColumnAndRow(1,$row->getRowIndex()));
             $fechafactura = trim($sheet->getCellByColumnAndRow(2,$row->getRowIndex()));
             $importe = trim($sheet->getCellByColumnAndRow(3,$row->getRowIndex()));
@@ -184,14 +180,14 @@ class Factura extends Controlador
                 'total'=>$total,
                 'denominacion'=>$denominacion
             ];
-            $arr_data_facturas[]=$data_facturas;
-            $numeroFacturas++;
+            $arr_data_registros[]=$data_facturas;
+            $numeroRegistros++;
 
-        }      
+        }
         
-        $facturasImportadas= $this->ModelFactura->insertarFacturasBDDesdeExcel($arr_data_facturas);
+        $facturasImportadas= $this->ModelFactura->insertarFacturasBDDesdeExcel($arr_data_registros);
         $data['facturasImportados']=$facturasImportadas;
-        $data['numeroFacturas']=$numeroFacturas;
+        $data['numeroFacturas']=$numeroRegistros;
 
         //echo"Total de Trabajadores leidos: ".$data['numeroFacturas'];
         //echo"Total de Trabajadores importados: ".$data['facturasImportados'];
