@@ -53,7 +53,7 @@
 
    <br>
    <h3>Ejemplo de Importar a la Base de Datos desde Excel</h3>
-   <p>Utilizar el fichero listadorFacturas.xlsx que está en la raíz de este proyecto</p>
+   <p>Utilizar el fichero listadoFacturas.xlsx que está en la raíz de este proyecto</p>
    <form action="<?php echo RUTA_URL;?>/Factura/importarListaFacturas" method="POST" enctype="multipart/form-data">
       <div class="mb-2">
          <a id="importarPlantilla" class="btn btn-info text-white"><i class="fas fa-file-excel mr-2"></i>Importar</a>      
