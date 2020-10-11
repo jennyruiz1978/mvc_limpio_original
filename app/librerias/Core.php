@@ -12,7 +12,7 @@ Ejemplo: /articulo/actualizar/4
 class Core {
 
 
-   protected $controladorActual = 'login';
+   protected $controladorActual = 'Login';
    protected $metodoActual = 'index';
    protected $parametros = [];
 
