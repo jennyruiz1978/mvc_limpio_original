@@ -22,10 +22,18 @@ class ModeloFactura {
     }
 
     public function obtenerListadoFacturas() {
+        /*
         $this->db->query('SELECT fac.idfactura, fac.numfactura,fac.fechafactura, fac.importe,
                         fac.iva, fac.total, cli.NOMBREJURIDICO AS denominacion 
                         FROM facturascabecera fac
                         LEFT JOIN empresasclientes cli ON fac.idempresa=cli.idEMPRESA');       
+        */
+
+        $this->db->query('SELECT fac.idfactura, fac.numfactura,fac.fechafactura, fac.importe,
+                        fac.iva, fac.total, cli.NOMBREJURIDICO AS denominacion, fac.cantidad, fac.codfactura, fac.concepto  
+                        FROM facturascabecera fac
+                        LEFT JOIN empresasclientes cli ON fac.idempresa=cli.idEMPRESA');       
+
 
         $facturas = $this->db->registros();
 
