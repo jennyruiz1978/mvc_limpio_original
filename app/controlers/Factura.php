@@ -68,19 +68,33 @@ class Factura extends Controlador
         
         $d = 'A'; //se refiere a la columna A del excel donde se recibirán los datos
 
-        $inicio = 1; //se refiere a la columnafila 1 del excel donde se recibirán los datos
+        $inicio = 1; //se refiere a la fila 1 del excel donde se escribirán las cabeceras
         
-        $cabeceras = [];
+        $cabecerasTmp = [];
         
         //incorporo las letras correlativamente empezando en 'A'
         foreach ($titulos as $key => $value) {
             $key->col = $d.$inicio;                
-            $cabeceras[$d.$inicio] = $key;
+            $cabecerasTmp[$d.$inicio] = $key;
             ++$d . PHP_EOL;
+        }
+        
+        //las cabeceras puede tener los nombres de los campos de la BD, 
+        //o en el array "reemplazos" se pueden cambiar los nombres
+        $cambiarCabeceras = true;
+        $reemplazos = array(
+                    'A1' => 'Id Factura', 'B1' => 'Nº Factura', 'C1' => 'Fecha Factura', 'D1' => 'B. Imponible', 
+                    'E1' => 'Tipo IVA(%)', 'F1' => 'Total(€)', 'G1' => 'Denominación', 'H1' => 'Cantidad', 
+                    'I1' => 'Código', 'J1' => 'Concepto');
+        
+        if ($cambiarCabeceras == true) {
+            $cabeceras = array_replace($cabecerasTmp, $reemplazos);
+        }else{
+            $cabeceras = $cabecerasTmp;
         }
 
         //llamo a la librería
-        ExportImportExcel::exportToExcel($cabeceras,$datos);
+        ExportImportExcel::exportToExcel($cabeceras,$cabecerasTmp,$datos);
     }
     
 
