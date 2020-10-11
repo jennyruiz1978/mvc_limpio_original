@@ -7,7 +7,7 @@
     class ExportImportExcel {
 
 
-        public static function exportToExcel($cabeceras,$lineas){
+        public static function exportToExcel($cabeceras,$cabecerasTmp,$lineas){
     
             $file = new Spreadsheet();
     
@@ -16,17 +16,19 @@
             $sentencia = $lineas;
             
             $active_sheet = $file->getActiveSheet();
-                        
+            
+            //escribimos las cabeceras
             foreach ($cabeceras as $letra => $cabecera) {                
                 $active_sheet->setCellValue($letra, $cabecera);                
             }
             $count = 2;
 
+            //escribimos las filas
             foreach($sentencia as $row)
             {                                
                 foreach ($row as $key => $val) {
 
-                    if ($clave = array_search($key,$cabeceras)) {
+                    if ($clave = array_search($key,$cabecerasTmp)) {
                         $columna= $clave[0];
                     }
                     
