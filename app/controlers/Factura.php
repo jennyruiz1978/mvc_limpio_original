@@ -70,15 +70,14 @@ class Factura extends Controlador
 
         $inicio = 1; //se refiere a la fila 1 del excel donde se escribirán las cabeceras
         
-        $cabecerasTmp = [];
-        
+        $cabecerasTmp = [];        
         //incorporo las letras correlativamente empezando en 'A'
         foreach ($titulos as $key => $value) {
             $key->col = $d.$inicio;                
             $cabecerasTmp[$d.$inicio] = $key;
             ++$d . PHP_EOL;
         }
-        
+
         //las cabeceras puede tener los nombres de los campos de la BD, 
         //o en el array "reemplazos" se pueden cambiar los nombres
         $cambiarCabeceras = true;
@@ -87,14 +86,32 @@ class Factura extends Controlador
                     'E1' => 'Tipo IVA(%)', 'F1' => 'Total(€)', 'G1' => 'Denominación', 'H1' => 'Cantidad', 
                     'I1' => 'Código', 'J1' => 'Concepto');
         
+        //formatos para los diferentes datos
+        
+        
         if ($cambiarCabeceras == true) {
             $cabeceras = array_replace($cabecerasTmp, $reemplazos);
         }else{
             $cabeceras = $cabecerasTmp;
         }
 
+        // si queremos darle formato a los datos podemos formatearlo desde la consulta msql
+        // o con este bucle para cada una columna en particular
+        foreach ($datos as $key) {
+            foreach ($key as $k => $v) {                
+                if ($k=='fechafactura') {
+                    $val = date('d-m-Y',strtotime($v));
+                    $key->fechafactura = $val; //sobreescribo la "fechafactura"          
+                }else if($k=='importe'){
+                    $val = number_format($v, 2, ',', '.');
+                    $key->importe = $val; //sobreescribo el "importe"
+                }
+            }
+        }
+        
         //llamo a la librería
         ExportImportExcel::exportToExcel($cabeceras,$cabecerasTmp,$datos);
+
     }
     
 
