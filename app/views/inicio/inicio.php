@@ -123,6 +123,15 @@
       <p>Ir a Facturas</p>
    </a>
 
-
+   <p>
+   <h2>Encriptación,Generación de Tokens y Base64</h2>
+   <ul>
+      <li>encriptacion::encrypt('cadena','clave');</li>
+      <li>encriptacion::decrypt('cadena encriptada','clave');</li>
+      <li>encriptacion::generarToken();</li>
+      <li>encriptacion::elementoToBase64(elemento);</li>
+      <li>encriptacion::base64ToElemento(elemento);</li>
+   </ul>
+   </p>
 
 <?php require(RUTA_APP . '/views/includes/footer.php'); ?>
