@@ -18,4 +18,4 @@ sustitutir por lo que se crea conveniente
 una pagina que se llama inicio.php, y tambien editar, crear, borrar, actualizar
 
 5.- El usuario de acceso es test@data.es y el pasword es test
-xxx2
+xxx3
