@@ -1,9 +1,10 @@
 <?php
+/*
 session_start();
 
 if ($_SESSION['token_control'] != 1) {
     redireccionar('/Login');
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +18,7 @@ if ($_SESSION['token_control'] != 1) {
         <!-- Bootstrap CSS -->
 
         <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL; ?>/public/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL ?>/public/css/estilos1.css">
         <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL ?>/public/css/estilos.css">
         <!-- summernote -->
         <link href="<?php echo RUTA_URL ?>/public/summernote/summernote-bs4.css" rel="stylesheet">

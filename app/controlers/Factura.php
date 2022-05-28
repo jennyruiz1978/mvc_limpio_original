@@ -30,35 +30,6 @@ class Factura extends Controlador
         
     }
 
-    public function enviarEmailConFacturaPdf()
-    {  
-        $datos = [
-            'email' => $_POST['email'],
-            'asunto' => $_POST['asunto'],
-            'mensaje' => $_POST['mensaje'],
-            'controlador' => 'inicio', //el nombre del controlador a donde regresara, puede ser dinámico
-            'idFactura' => $_POST['idFactura'], //el nombre del controlador a donde regresara, puede ser dinámico
-         ];
-
-        $nombreRemitente = 'Nombre Remitente Ejemplo'; // puede ser el $_SESSION['nombre'] del usuario logueado o lo que sea
-        $emailRemitente = 'info@dataleanmakers.es'; // o $_SESSION['mail'] si no usa casilla de correo de Data Lean Makers
-        $nombreDestinatario = 'Nombre Destinatario Ejemplo'; //puedes traer el nombre con el idPersona que viene por post.
-        $emailDestinatario = $datos['email'];
-        $asunto = $datos['asunto'];   
-        $message = $datos['mensaje'];
-
-        //construyo el fichero pdf        
-        $datosFactura = $this->ModelFactura->obtenerDatosFactura($datos['idFactura']);
-        
-        $attachment = generarPdf::documentoPDFParaEmail('L', 'A4', 'es', true, 'UTF-8', array(10,20,8,10), true, 'documentos/facturaPrueba', 'factura.php', $datosFactura, 'S');
-        // la letra 'S' para no generar el documento sino un attachment
-        
-        //$attachment = generarPdf::documentoPDFParaEmail('L', 'A4', 'es', true, 'UTF-8', array(10,20,8,10), true, 'documentos/factura', 'factura.php', $datosFactura);
-
-        Email::enviarEmailDestinatario($nombreRemitente, $emailRemitente, $nombreDestinatario, $emailDestinatario,$asunto,$message,$attachment,$datos);
-
-    }
-
 
     public function exportarListaFacturas()
     {

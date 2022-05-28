@@ -48,31 +48,7 @@
       <div>
             <?php            
 
-               if ($datos['ficheros'][0]) {
-                     echo"
-                     <table class='table mt-3'>
-                        <thead>
-                           <tr>
-                                 <th scope='col'>Descripción</th>
-                                 <th scope='col'>Fichero</th>
-                                 <th scope='col'>Eliminar</th>
-                           </tr>
-                        </thead>
-                        <tbody>";                                     
-                           $ficheros = $datos['ficheros'];
-                           foreach ($ficheros as $key) {
-                                 echo"
-                                 <tr>
-                                    <td scope='row'>".$key->descripcion."</td>
-                                    <td><div><a href='".RUTA_URL."/presupuesto/downloadFicheroPresupuesto/".$key->idDocumento."' target='_BLANK'>".$key->nombre."</a></div></td>
-                                    <td><a class='btn btn-danger eliminarFichero' title='Quitar' style='color:white;'><i class='fas fa-trash'></i></a></td>
-                                 </tr>";
-                           }
-                        
-                        echo"
-                        </tbody>
-                     </table>";
-               }
+             
             ?>
 
       </div>

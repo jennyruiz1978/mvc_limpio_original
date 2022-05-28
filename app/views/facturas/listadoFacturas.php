@@ -11,42 +11,6 @@
       <button type="submit" name="export" class="btn btn-primary mb-3" title="Exportar excel" value="Export"><i class="fas fa-file-excel"></i> Exportar Excel</button>
       
       <div>
-            <?php            
-
-               if ($datos['facturas'][0]) {
-                     echo"
-                     <table class='table mt-3'>
-                        <thead>
-                           <tr>
-                                 <th scope='col'>idfactura</th>
-                                 <th scope='col'>numfactura</th>
-                                 <th scope='col'>fechafactura</th>
-                                 <th scope='col'>B. Imponible</th>
-                                 <th scope='col'>IVA(%)</th>
-                                 <th scope='col'>Total</th>
-                                 <th scope='col'>Cliente</th>
-                           </tr>
-                        </thead>
-                        <tbody>";                                     
-                           $facturas = $datos['facturas'];
-                           foreach ($facturas as $key) {
-                                 echo"
-                                 <tr>
-                                    <td scope='row'>".$key->idfactura."</td>
-                                    <td scope='row'>".$key->numfactura."</td>
-                                    <td scope='row'>".$key->fechafactura."</td>
-                                    <td scope='row'>".$key->importe."</td>
-                                    <td scope='row'>".$key->iva."</td>
-                                    <td scope='row'>".$key->total."</td>
-                                    <td scope='row'>".$key->denominacion."</td>
-                                 </tr>";
-                           }
-                        
-                        echo"
-                        </tbody>
-                     </table>";
-               }
-            ?>
 
       </div>
    </form>
@@ -65,42 +29,7 @@
       </div>
 
       <div>
-            <?php            
-
-               if ($datos['facturasImport'][0]) {
-                     echo"
-                     <table class='table mt-3'>
-                        <thead>
-                           <tr>
-                                 <th scope='col'>idfactura</th>
-                                 <th scope='col'>numfactura</th>
-                                 <th scope='col'>fechafactura</th>
-                                 <th scope='col'>B. Imponible</th>
-                                 <th scope='col'>IVA(%)</th>
-                                 <th scope='col'>Total</th>
-                                 <th scope='col'>Cliente</th>
-                           </tr>
-                        </thead>
-                        <tbody>";                                     
-                           $facturas = $datos['facturasImport'];
-                           foreach ($facturas as $key) {
-                                 echo"
-                                 <tr>
-                                    <td scope='row'>".$key->idfactura."</td>
-                                    <td scope='row'>".$key->numfactura."</td>
-                                    <td scope='row'>".$key->fechafactura."</td>
-                                    <td scope='row'>".$key->importe."</td>
-                                    <td scope='row'>".$key->iva."</td>
-                                    <td scope='row'>".$key->total."</td>
-                                    <td scope='row'>".$key->empresa."</td>
-                                 </tr>";
-                           }
-                        
-                        echo"
-                        </tbody>
-                     </table>";
-               }
-            ?>
+        
 
       </div>
    </form>

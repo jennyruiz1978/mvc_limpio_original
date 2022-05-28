@@ -1,0 +1,56 @@
+{
+    "Admin": {
+        "Dashboard"     : { "tipo":"bloque", 
+            "nombre":"Dashboard", 
+            "menus" :{"Métricas":"Articulos"                                    
+                },
+            "metodo":"",
+            "icono":"<i class='fas fa-chart-bar icono-grande'></i>"},
+        "Ventas"        : { "tipo":"bloque", 
+                    "nombre":"Ventas", 
+                    "menus" :{"Presupuestos":"Presupuestos",                                    
+                            "Albaranes":"Salidas",
+                            "Facturas":"FacturasVentas"                                    
+                        },
+                    "metodo":"",
+                    "icono":"<i class='fas fa-cash-register icono-grande'></i>"},
+        "Compras"       : { "tipo":"bloque", 
+                    "nombre":"Compras", 
+                    "menus" :{"Pedidos a Proveedores":"Pedidos",                                   
+                            "Entradas":"Entradas",
+                            "Facturas recibidas":"FacturasCompras"                                    
+                        },
+                    "metodo":"",
+                    "icono":"<i class='fas fa-people-carry icono-grande'></i>"},
+        "Artículos"     : { "tipo":"bloque", 
+                    "nombre":"Artículos", 
+                    "menus" :{"Artículos":"Articulos",                                 
+                            "Familias":"Articulos/familias",
+                            "Subfamilias":"Articulos/subfamilias"                                    
+                        },
+                    "metodo":"",
+                    "icono":"<i class='fas fa-box-open icono-grande'></i>"},
+        "Almacén"       : { "tipo":"bloque", 
+                    "nombre":"Almacén", 
+                    "menus" :{  "Stock negativo":"Stock/stockNegativo",                            
+                                "Toma Inventario":"Stock/tomaInventario",
+                                "Traspasos Entrada":"TraspasosEntradas",
+                                "Traspasos Salida":"TraspasosSalidas"
+                        },
+                    "metodo":"",
+                    "icono":"<i class='fas fa-boxes icono-grande'></i>"},
+        "Clientes"      : { "tipo":"bloque", 
+                    "nombre":"Clientes", 
+                    "menus" :{  "Listado":"Clientes"                                        
+                        },
+                    "metodo":"",
+                    "icono":"<i class='fas fa-user-tie icono-grande'></i>"},     
+        "Configuración" : { "tipo":"bloque", 
+                            "nombre":"Configuración", 
+                            "menus" :{"Usuarios":"UsuariosERP", "Permisos":"UsuariosERP"},
+                            "metodo":"",
+                            "icono":"<i class='fas fa-cogs icono-grande'></i>"}
+    }   
+}
+
+

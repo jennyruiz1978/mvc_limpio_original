@@ -1,9 +1,11 @@
 <?php
 // Configuracion de acceso a la base de datos
-define('DB_HOST','185.92.246.83');
-define('DB_USUARIO','admin_mvc');
-define('DB_PASSWORD','admin_mvc2020$');
-define('DB_NOMBRE','admin_mvc');
+
+
+define('DB_HOST','localhost');
+define('DB_USUARIO','root');
+define('DB_PASSWORD','');
+define('DB_NOMBRE','agricola');
 
 // Ruta de la aplicacion
 define('RUTA_APP', dirname(dirname(__FILE__)));

@@ -1,6 +1,980 @@
-/*
-body{
-    background-color: blue;
-}
-*/
 
+
+input.inputTitleSeccion {
+    border: none;
+    background-color: #f7f7f7;
+    width: 80%;
+    vertical-align: -webkit-baseline-middle;
+}
+
+textarea.inputContentSeccion{
+    border: none;
+    background-color: #ffff;
+    width: 100%;
+}
+
+
+/*incio*/
+
+img#logoLogin {
+    /*width: 100%;*/
+    width: 418px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.btn-login{
+    color: #fff;
+    background-color: #afca04;
+    border-color: #afca04;
+}
+
+img#logoNavbar {
+    width: 200px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, 
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: black;
+}
+
+
+.item-menu.botonMain {
+    background-color: #a1cc8945 !important;
+}
+
+.nombreBotonMain {
+    font-size: 0.9rem;
+    color: black !important;    
+    margin-bottom: 0px;
+}
+::after {
+    color: black !important;
+}
+.icono-grande {
+    font-size: 3.1em;
+    color: #000000 !important;
+}
+
+.modalBodyArticulos{
+    border-bottom: 1px solid #dee2e6;
+}
+
+#tablaProveedores td, #tablaProveedores th,
+#tablaContactos td, #tablaContactos th,
+#tablaUbicaciones th, #tablaUbicaciones td,
+#tablaSerieLoteFichaArticulo th, #tablaSerieLoteFichaArticulo td {
+    padding: 0rem;
+    font-size: 0.9rem;
+}
+
+#tablaSeriesLotesSalida td, 
+#tablaSeriesLotesSalida th {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#tablaTarifas th, #tablaTarifas td {
+    padding: 0rem;   
+    font-size: 0.9rem;
+}
+
+td.altoCells{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    vertical-align: middle;
+}
+.modalBodyArticulos .form-group{
+    margin-bottom: 0rem;
+}
+
+i.fas.fa-trash {
+    color: #bf3333;
+}
+
+i.fas.fa-plus-square {
+    color: green;
+    padding-left: 15px;
+    font-size: 1.3rem;
+}
+
+p.apartado, h4.apartado, h5.apartado {
+    margin-bottom: 0px;
+    font-size: 0.85rem;
+    color: #0b631f;
+    font-weight: 500;
+}
+
+.modalHeaderFichas{
+    background-color: #def169;
+}
+
+.td.anchoFirstCol {
+    width: 8%;
+}
+
+table#tabla1 td{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 0.8rem;
+}
+
+th.titulos {
+    padding: 0.4rem;
+}
+
+td.cells {
+    vertical-align: middle;
+}
+
+p.pequenio{
+    font-size: 0.7rem;
+}
+
+.btnNuevo{
+    color: #fff;
+    background-color: #afca05;
+    border-color: #afca05;
+}
+
+.breadcrumb{
+    margin-bottom: 0px;
+    background-color: #ffff;
+    padding: 0.6rem 1rem;
+}
+.dropdown-menu.show {
+    background-color: #bed7ae;
+}
+.btnAddContacto{
+    color: #fff;
+    background-color: #afca05;
+    border-color: #afca05;
+}
+
+.modalHeaderVentana h5,
+.modalHeaderAcciones h5{
+    font-size: 0.8rem;  
+}
+
+.modalHeaderVentana{   
+    padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    background-color: #afca05;
+}
+
+.modalHeaderAcciones{   
+    padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    background-color: #dfe0db;
+}
+
+button.btnTipoGeneral {
+    padding: 0rem;   
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    font-size: 0.9rem;
+}
+a.btnTipoGeneral {
+    padding: 0rem;   
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.iconoGenerico{
+    margin-right: 3px;
+}
+i.iconoGenericoAuxiliar {
+    font-size: 1.3rem;
+}
+
+.cintaAcciones, .modalEncabezadoVentana, .modalGrillaVentana{
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.3rem;
+    justify-content: flex-start;
+}
+
+.modalContenidoVentana {
+    font-size: 0.8rem;
+}
+
+.separadorBloques {
+    border-left: 1px solid green;
+    height: 25px;    
+    left: 50%;  
+}
+
+.labelVentana{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.modal-body.modalEncabezadoVentana {
+    background-color: #fbd1d1;
+}
+
+#tablaGrilla td, #tablaGrilla th, #tablaTotales td,
+#tablaSeriesLotes td, #tablaSeriesLotes th,
+#tablaInfoMargenes td, #tablaInfoMargenes th,
+#tablaInfoProveedores td, #tablaInfoProveedores th,
+#tablaInfoExistencias td, #tablaInfoExistencias th,
+#tablaGrillaInventario td, #tablaGrillaInventario th {
+    padding: 0rem;
+}
+
+
+
+.contenedorDetalles{
+    border: 1px solid #e9ecef;
+    font-size: 0.8rem;
+}
+
+.tituloApartadoVentana {
+    background-color: #e9ecef;
+    text-align: center;
+    color: #12cc3c;
+    font-weight: 500;
+}
+
+.btnTipoGeneral:hover {
+    background-color: azure;
+    color: #b7bdac;
+}
+
+input.inputGrillaAuto {
+    width: 100%;
+    line-height: 0%;
+    border: none;
+    /*font-size: 0.7rem;*/
+    font-size: 1rem;
+    text-align: right;
+}
+
+input.inputGrillaGuardado {
+    width: 100%;
+    line-height: 0%;
+    border: none;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.inputClickSearch{
+    width: 100%;    
+    border: none;    
+    text-align: left;
+}
+
+.clienteClickSearch{
+    width: 100%;    
+    border: none;    
+    text-align: left;
+}
+
+.inputGrillaDescripcion, .inputGrillaArticulo{
+    width: 100%;
+    line-height: 0%;
+    border: none;
+    /*font-size: 0.7rem;*/
+    font-size: 1rem;
+    text-align: left;
+}
+
+.form-control{
+    font-size: 0.9rem;
+}
+
+td.celdaDescripcion {
+    width: 40%;
+}
+
+.modal.probando.show {
+    overflow: scroll;
+}
+
+#mensajeValidacion, #msgValidacionFacturar, #msgValidacionFacturarMasivo{
+    font-size: 1rem;
+    font-weight: 600;
+    color: red;
+}
+select.inputGrillaAuto.iva {
+    /*font-size: 0.7rem;*/
+    font-size: 1rem;
+}
+
+.menuAuxiliar {
+    background-color: #ffff;
+}
+
+.cintaAccionesAuxiliares {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.7rem;
+    justify-content: flex-start;
+}
+
+input.celdaAlbaranFacturar {
+    font-size: 0.8rem;    
+    padding: 0rem;    
+    text-align: center;
+}
+
+span#select2-clienteAFacturar-container {
+    font-size: 0.8rem;
+}
+
+#formFacturarAlbaranesVenta{
+    font-size: 0.8rem;
+}
+
+#formFacturarAlbaranesVenta label.col-form-label,
+#formFacturarAlbaranesVenta legend {
+    font-weight: 700;    
+}
+
+.labelApunte{
+    font-size: .7rem;
+}
+
+select.inputGrillaAuto.iva {    
+    width: 100%;
+    border: none;
+}
+
+.btnNuevoLote{
+    color: #ffff;
+    background-color: #86c399;
+    border-color: #86c399;
+}.btnBorrarLote{    
+    color: #ffff;
+    background-color: #b78e92;
+    border-color: #b78e92;
+}
+.btnBuscarLote{    
+    background-color: #bda65f;
+    border-color: #bda65f;
+    color: #ffff;
+}
+
+#tablaSeriesLotes td{
+    height: 22px;
+}
+
+.editarCerrar:hover{
+    color: #42cc3c;
+
+}
+
+a.nav-link.active.navPedidos {
+    background-color: #afca05;
+}
+
+a.nav-link.enlacePedidos {
+    color: #42cc3c;
+}
+
+.contInfoProv {
+    border: 1px solid #b3afaf;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 5px;
+}
+
+th.fondoConMargen {
+    background-color: #d8f3d8;
+}
+
+th.fondoPrecioFijo {
+    background-color: #fffacb;
+}
+
+
+.inputArticuloTarifas{
+    width: 100%;
+    line-height: 0%;
+    border: none;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+#contenedorSelectorProv span.select2.select2-container {
+    width: 40% !important;
+}
+
+input.editarMargen, input.editarPrecio {
+    background-color: #f9e0e8;
+}
+
+.modal-title.modalCliente,
+.modal-title.modalAux {
+    font-size: 1rem;
+}
+
+.cardArticulo{
+    font-size: 0.9rem;
+}
+.btnCodigoBarras {
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}
+
+th.colStock {
+    width: 30%;
+}
+
+#contenedorTablaArticulos{    
+    font-size: 0.75rem;
+}
+
+.contenedorResultQueryEntSal{
+    overflow:scroll;
+    height:300px;
+    width:100%;
+    
+}
+
+#contenedorTablaCliente{
+    overflow:scroll;
+    height:200px;
+    width:100%;
+    font-size: 0.75rem;
+}
+
+#contenedorTablaDescuentosCliente{
+    overflow:scroll;
+    height:400px;
+    width:100%;
+    font-size: 0.85rem;
+}
+
+#contenedorTablaPedidosPorArticulo, #contenedorTablaConsumosPorArticulo{
+    overflow:scroll;
+    height:200px;
+    width:100%;
+    font-size: 0.85rem;
+}
+
+#contenedorTablaDescuentosPorArticulo{
+    overflow:scroll;
+    height:400px;
+    width:100%;
+    font-size: 0.85rem;
+}
+
+
+#contenedorBuscadorScrollClientes{
+    overflow:scroll;
+    height:500px;
+    width:100%;    
+}
+
+
+
+
+.grillaBaja{
+    overflow:scroll;
+    height:200px;
+    width:100%;    
+}
+
+.grillaAlta{
+    overflow:scroll;
+    height:400px;
+    width:100%;    
+}
+
+#estadisticasClientes,
+#estadisticasArticulo{
+    font-size: 0.85rem;
+}
+
+#estadisticasClientes th, 
+#estadisticasClientes td {
+    padding: 6px 2px 6px 2px;
+}
+
+
+.iconosAlertaNav {
+    position: relative;    
+    right: 0.25rem;
+    vertical-align: super;
+}
+
+.alertaIconoVerde{
+    color: #1a8a1e;
+}
+
+
+.alertaIconoRojo{
+    color: #ec1b1b;
+}
+
+th.colDescripcion, td.colDescripcion {
+    /*width: 38%;*/
+    /*text-align: center;   */
+}
+
+th.colFamilia, td.colFamilia {
+    /*width: 15%;   */ 
+}
+
+th.colCodArt, td.colCodArt{
+    width: 7%;
+}
+
+.alertaIconoNaranja{
+    color: #bda65f;
+}
+
+#tablaCabeceraBuscadorArticulos{
+    font-size: 0.9rem;
+}
+
+#tablaCabeceraBuscadorClientes{
+    font-size: 0.9rem;
+}
+
+.cerrarBuscadorArticulos{
+        padding: 0;
+        background-color: transparent;
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+}
+
+th.thBuscador {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+i.fas.fa-file-import {
+    color: darkmagenta;
+}
+
+#tablaGrilla input.inputGrillaGuardado {
+    font-size: 1rem;
+}
+
+span.select2-selection.select2-selection--single {
+    height: 36px;
+}
+
+#tablaSeriesLotesInventario td, #tablaSeriesLotesInventario th {
+    padding: .25rem;    
+}
+
+table#tablaGrillaInventario td {
+    font-size: 1rem;
+}
+
+
+#contenedorTablaPresupuestos {
+    overflow: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#contenedorTablaFacturasSalidasScroll {
+    overflow: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#contenedorTablaEntradasScroll {
+    overflow-y: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+
+table#tablaEntradasScroll {
+    font-size: 0.8rem;    
+}
+#tablaEntradasScroll thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+
+
+
+#contenedorTablaFacturasComprasScroll {
+    overflow: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#contenedorTablaPedidosScroll {
+    overflow: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#tablaCabeceraAlbaranesSalida th.colAngosta{
+    width: 8%;
+}
+
+#tablaCabeceraAlbaranesSalida th.colNormal{
+    width: 4%;
+}
+
+#tablaCabeceraAlbaranesSalida th.colCliente {
+    width: 30%;
+}
+#tablaCabeceraAlbaranesSalida th.tdBotones {
+    width: 10%;
+}
+
+#tablaSalidasScroll th.colAngosta, 
+#tablaSalidasScroll td.colAngosta{
+    width: 10%;
+}
+
+#tablaSalidasScroll th.colCliente,
+#tablaSalidasScroll td.colCliente {
+    width: 39%;
+}
+
+
+
+#tablaSalidasScroll th.colNormal, 
+#tablaSalidasScroll td.colNormal {
+    width: 4%;
+}
+
+input.inputClickSearchList{
+    width: 100%;    
+    border: none;    
+    text-align: left;
+}
+
+th.colAngosta2 {
+    width: 2%;
+}
+
+
+#tablaCabeceraBuscadorClientes th.colCodClie{
+    width: 8%;
+}
+
+#tablaCabeceraBuscadorClientes th.colNombreCliente{
+    width: 28%;
+}
+
+#tablaBuscadorClientesScroll td.colCodClie{
+    width: 8%;
+}
+#tablaBuscadorClientesScroll td.colNombreCliente{
+    width: 28%;
+}
+
+
+
+.cobrado {
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffff;
+}
+
+.cobradoparcial {
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+    text-align: center;
+    color: #212529;
+}
+
+.pendiente {
+    background-color: #cf6c6c;
+    border: 1px solid #cf6c6c;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffff;
+}
+
+table.table.table-sm.historialCobrosContenedor th, table.table.table-sm.historialCobrosContenedor td {
+    font-size: 0.8rem;
+}
+
+table#tablaArticulosScroll {
+    font-size: 0.8rem;
+}
+
+
+#contenedorTablaSalidasScroll {
+    overflow-y:scroll;
+    height: 500px;
+    width: 100%;
+}
+
+table#tablaSalidasScroll {
+    font-size: 0.8rem;    
+}
+#tablaSalidasScroll thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+
+#contenedorTablaArticulosScroll {
+    overflow-y: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#tablaArticulosScroll thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+#tablaBuscadorScrollArticulos {
+    overflow-y: scroll;
+    height: 500px;
+    width: 100%;
+}
+
+#tablaBuscadorArticulos thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+#tablaGrilla th,
+#tablaGrillaInventario th, #tablaBuscadorClientesScroll th {
+    text-align: right;
+}
+
+#tablaBuscadorArticulos td.filaArticulo,
+#tablaBuscadorClientesScroll td.filaClikCli  {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+
+
+
+table#tablaTraspasosEntScroll td {
+    padding: 0.5rem;
+}
+
+#contenedorTablaTraspEntScroll {
+    overflow-y:scroll;
+    height: 500px;
+    width: 100%;
+}
+
+table#tablaTraspasosEntScroll {
+    font-size: 0.8rem;    
+}
+#tablaTraspasosEntScroll thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+#contenedorFiltrosAlbaranesSalidas{
+    font-size: 0.8rem;
+}
+
+
+#contenedorTablaPresupuestosScroll {
+    overflow-y:scroll;
+    height: 500px;
+    width: 100%;
+}
+
+table#tablaPresupuestosScroll {
+    font-size: 0.8rem;    
+}
+#tablaPresupuestosScroll thead tr th { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+.btnCloseModal {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    background-color: transparent;
+    border: 0;
+}
+
+
+
+
+.alert-dismissible .closeModalMensaje {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+
+button.closeModalMensaje {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.closeModalMensaje {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.contenedorTrazabilidad{
+    overflow-y:scroll;
+    height:300px;
+    width:100%;
+    font-size: 0.85rem;
+}
+
+/* css para la tabla scroll infinito*/
+
+/*table * {height: auto; min-height: none;} */ /* fixed ie9 & <*/
+
+/*
+table {
+  background: #dee7cd;
+  table-layout: fixed;
+  margin: 1rem auto;
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  border-top: 0 none;
+}
+thead {
+  background: #e8f8d5;
+  text-align: center;
+  z-index: 2;
+}
+thead tr {
+  padding-right: 17px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.6);
+  z-index: 2;
+}
+th {
+  border-right: 2px solid rgba(0,0,0,.2);
+  padding: .7rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-variant: small-caps;
+}
+tbody {
+  display: block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1 px);*/
+  /*use calc for fixed ie9 & <*/
+  /*
+  overflow-Y: scroll;
+  color: #000;
+}
+tr {
+  display: block;
+  overflow: hidden;
+}
+tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,.2);
+}
+th, td {
+  width: 10%;
+  float:left;
+}
+td {
+  padding: .5rem 0 .5rem 1rem;
+  border-right: 2px solid rgba(0,0,0,.2);
+}
+td:nth-child(2n) {color: #000;}
+[data-campo='Mail'] {
+  width: 30%;
+}  
+th:last-child, td:last-child {
+  width: 7%;
+  text-align: center;
+  border-right: 0 none;
+  padding-left: 0;
+}
+
+
+@media only screen and (max-width:800px) {
+  table {
+    border-top: 1px solid ;
+  }
+  thead {display: none;}
+  tbody {
+    height: auto;
+    max-height: 55vh;
+  }
+  tr {
+    border-bottom: 2px solid rgba(0,0,0,.35);
+  }
+  tbody tr:nth-child(odd) {background: #15BFCC;}
+  tbody tr:nth-child(even) {background:#FF7361;}
+  td {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    padding: .4rem .5rem .4rem 40%;
+    border-right: 0 none;
+  }
+  td:before {
+    content: attr(data-campo);
+    background: rgba(0,0,0,.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 37%;
+    padding-left: .5rem;
+    font-family: monospace;
+    font-size: 150%;
+    font-variant: small-caps;
+    line-height: 1.8;
+  }
+  tbody td:last-child {
+    text-align: left;
+    padding-left: 40%;
+  }
+  td:nth-child(even) {
+    background: rgba(0,0,0,.2);
+  }
+}
+
+a {color: #FF7361}
+*/

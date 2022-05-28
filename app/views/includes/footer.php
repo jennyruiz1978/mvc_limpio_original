@@ -23,7 +23,17 @@
 <script src="<?php echo RUTA_URL ?>/public/node_modules/c3/c3.js"></script>
 <script type="text/javascript" src="<?php echo RUTA_URL ?>/public/js/vistaInicio.js"></script>
 
+<script>
+// carga automaticamente el modal
+    $('.probando').modal({
+        backdrop: 'static',
+        keyboard: false
+    });        
+</script>
 
+
+<script type="text/javascript" src="<?php echo RUTA_URL ?>/public/js/salidas2.js"></script>
+<script type="text/javascript" src="<?php echo RUTA_URL ?>/public/js/salidas.js"></script>
 
 </body>
 

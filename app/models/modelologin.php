@@ -10,7 +10,7 @@ class modelologin {
 
     public function comprobarLogin($mail, $pass) {
 //          Ahora trabajamos con un array, en producción lo haremos con una tabla de la base de datos
-        $usuarios = ["test@data.es", "test", "Test"];
+        $usuarios = ["testing@prueba.com", "testing", "Test"];
 
         if (in_array($mail, $usuarios) && in_array($pass, $usuarios)) {
             return $usuarios[2];

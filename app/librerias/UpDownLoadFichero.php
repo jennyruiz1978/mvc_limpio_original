@@ -1,18 +1,5 @@
 <?php
 
-    /**
-     * Clase UpDownLoadFichero :
-     * 
-     * Clase para la subida o descarga de ficheros
-     * 
-     * @autor Jenny Ruiz
-     * 
-     * @version 1.0 - Versión inicial - Octubre 10 de 2020
-     * 
-     * @copyright Data Lean Makers
-     * 
-     */
-
 
     class UpDownLoadFichero {
 

@@ -15,12 +15,13 @@ class Login extends Controlador {
     
 
     public function acceder() {
-
+       
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $mail = $_POST['mail'];
             $pass = $_POST['pass'];
         }
         $validacion = $this->usuarioModelo->comprobarLogin($mail, $pass);
+       
         if ($validacion == false) {
               redireccionar('/login');
         } 
